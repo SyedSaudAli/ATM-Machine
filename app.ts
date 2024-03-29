@@ -15,6 +15,12 @@ let pinAnswer = await inquirer.prompt([
   },
 ]);
 if (pinAnswer.pin === mypin) {
+    let accountType = await inquirer.prompt([{
+      name:'accountType',
+      message:'Enter your account type',
+      type:'list',
+      choices: ['Current Account' , 'Saving Account']
+    }])
   let selectAnswer = await inquirer.prompt([
     {
       name: "select",
